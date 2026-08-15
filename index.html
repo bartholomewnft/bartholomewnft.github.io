@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order of Bartholomew — Whitelist Rites</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- HEADER -->
+    <header class="card">
+      <svg class="emblem" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="46" stroke="#b8934a" stroke-width="2"/>
+        <path d="M50 20V80M35 35H65" stroke="#b8934a" stroke-width="3" stroke-linecap="square"/>
+      </svg>
+      <p class="eyebrow">Order of Bartholomew · Rite of Admission</p>
+      <h1>Whitelist Rites</h1>
+      <p class="lede">
+        Fulfil each rite below, seal it with your mark, then present
+        your name and wallet for judgement.
+      </p>
+    </header>
+
+    <!-- SECTION 01 -->
+    <section class="card">
+      <div class="section-title">
+        <span class="section-num">I</span>
+        <h2>The Rites</h2>
+      </div>
+
+      <!-- TASK 1 -->
+      <div class="task" id="task-1" data-state="active">
+        <div class="task-head">
+          <span class="task-id">Rite No. 1</span>
+          <span class="badge" id="badge-1">Unsealed</span>
+        </div>
+        <h3>Swear Fealty on X</h3>
+        <p>Open our page, follow the Order, then return and seal your oath.</p>
+
+        <div class="task-row">
+          <a class="btn-link" href="https://x.com/oo_bartholomew" target="_blank" rel="noopener">
+            Follow @oo_bartholomew <span class="ext">↗</span>
+          </a>
+          <button type="button" class="confirm-btn" data-task="1">
+            <span class="confirm-icon"></span>
+            <span class="confirm-text">I have followed @oo_bartholomew</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- TASK 2 -->
+      <div class="task" id="task-2" data-state="locked">
+        <div class="task-head">
+          <span class="task-id">Rite No. 2</span>
+          <span class="badge" id="badge-2">Locked</span>
+        </div>
+        <h3>Spread the Word</h3>
+        <p>Open the decree, like and repost it, then return and seal.</p>
+
+        <div class="task-row">
+          <a class="btn-link" href="https://x.com/oo_bartholomew/status/GANTI_TWEET_ID" target="_blank" rel="noopener">
+            Like &amp; Repost <span class="ext">↗</span>
+          </a>
+          <button type="button" class="confirm-btn" data-task="2" disabled>
+            <span class="confirm-icon"></span>
+            <span class="confirm-text">I have liked and reposted the decree</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- TASK 3 -->
+      <div class="task" id="task-3" data-state="locked">
+        <div class="task-head">
+          <span class="task-id">Rite No. 3</span>
+          <span class="badge" id="badge-3">Locked</span>
+        </div>
+        <h3>Summon 2 Kin</h3>
+        <p>Comment on the decree tagging 2 kin, then paste your comment link below.</p>
+
+        <div class="task-row task-row-column">
+          <a class="btn-link btn-link-full" href="https://x.com/oo_bartholomew/status/GANTI_TWEET_ID" target="_blank" rel="noopener">
+            Comment on X <span class="ext">↗</span>
+          </a>
+          <input
+            type="url"
+            id="comment-link"
+            class="text-input"
+            placeholder="Paste your comment link here"
+            disabled
+          >
+          <button type="button" class="confirm-btn" data-task="3" disabled>
+            <span class="confirm-icon"></span>
+            <span class="confirm-text">I have summoned 2 kin</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 02 -->
+    <section class="card">
+      <div class="section-title">
+        <span class="section-num" id="section-num-2">II</span>
+        <h2>Present Thyself</h2>
+      </div>
+
+      <div class="lock-notice" id="id-lock-notice">
+        All rites must be sealed before your name may be presented.
+      </div>
+
+      <form id="wl-form" class="id-fields" data-locked="true">
+        <div class="field">
+          <label for="handle">X Handle</label>
+          <input type="text" id="handle" name="handle" placeholder="@yourname" disabled required>
+        </div>
+        <div class="field">
+          <label for="wallet">Wallet Address</label>
+          <input type="text" id="wallet" name="wallet" placeholder="0x... or name.eth" disabled required>
+        </div>
+
+        <p class="fine-print">One petition per account and wallet. The Order denies duplicate oaths.</p>
+
+        <button type="submit" id="submit-btn" disabled>Complete All Rites First <span class="ext">↗</span></button>
+
+        <p id="form-status" class="form-status"></p>
+      </form>
+    </section>
+
+    <footer class="footnote">© Order of Bartholomew — All Rights Reserved</footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
