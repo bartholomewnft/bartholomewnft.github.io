@@ -1033,8 +1033,8 @@ label {
     border-bottom: 1px solid var(--line);
     text-align: left;
   }
-  .primary-nav a:last-child { border-bottom: none; margin-top: 10px; text-align: center; }
-  .btn-nav-cta { padding: 12px 16px; }
+  .primary-nav a:last-child { border-bottom: none; margin-top: 14px; text-align: center; }
+  .btn-nav-cta { padding: 14px 16px; }
 
   .section { padding: 64px 18px; }
   .hero { padding-top: 96px; }
