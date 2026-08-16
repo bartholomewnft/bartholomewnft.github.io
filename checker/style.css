@@ -117,7 +117,7 @@
   background: rgba(184, 147, 74, 0.08);
 }
 .check-result.is-eligible .seal {
-  background: var(--gold);
+  background: #34d399;
   color: #0a0908;
 }
 .check-result.is-eligible .verdict { color: var(--gold-bright); }
