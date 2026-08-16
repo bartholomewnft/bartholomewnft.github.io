@@ -1,0 +1,159 @@
+/* ================================================================
+   ORDER OF BARTHOLOMEW — WALLET CHECKER STYLESHEET
+   Pulls every colour, font and spacing token straight from the
+   main site's stylesheet so the two pages always stay in sync.
+   Only checker-specific rules live below the import.
+================================================================= */
+
+@import url("../style.css");
+
+.checker-main {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.checker-hero {
+  width: 100%;
+  padding-top: 140px;
+}
+
+.checker-card {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.checker-card .field {
+  margin-bottom: 18px;
+}
+
+.checker-row {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.checker-row .text-input {
+  flex: 1;
+}
+
+.checker-btn {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.checker-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.check-hint {
+  font-size: 0.78rem;
+  color: var(--text-faint);
+  font-style: italic;
+  margin: 10px 0 0;
+  min-height: 1.1em;
+}
+
+.check-result {
+  margin-top: 24px;
+  border-radius: var(--radius);
+  padding: 22px 20px;
+  text-align: center;
+  border: 1px solid var(--line);
+  background: var(--bg-inset);
+  animation: reveal 0.35s ease;
+}
+
+.check-result[hidden] { display: none; }
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.check-result .seal {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.check-result .verdict {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin: 0 0 8px;
+}
+
+.check-result .verdict-copy {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-style: italic;
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+
+.check-result .wallet-echo {
+  display: inline-block;
+  font-family: 'EB Garamond', serif;
+  font-size: 0.82rem;
+  color: var(--text-faint);
+  border: 1px dashed var(--line);
+  border-radius: 4px;
+  padding: 6px 12px;
+  word-break: break-all;
+}
+
+.check-result.is-eligible {
+  border-color: var(--gold);
+  background: rgba(184, 147, 74, 0.08);
+}
+.check-result.is-eligible .seal {
+  background: var(--gold);
+  color: #0a0908;
+}
+.check-result.is-eligible .verdict { color: var(--gold-bright); }
+
+.check-result.is-ineligible {
+  border-color: var(--line);
+}
+.check-result.is-ineligible .seal {
+  background: transparent;
+  border: 1px solid var(--error);
+  color: var(--error);
+}
+.check-result.is-ineligible .verdict { color: var(--text); }
+
+.check-result.is-invalid {
+  border-color: var(--line);
+}
+.check-result.is-invalid .seal {
+  background: transparent;
+  border: 1px solid var(--gold-dim);
+  color: var(--gold);
+}
+.check-result.is-invalid .verdict { color: var(--text); }
+
+.checker-meta {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--text-faint);
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+}
+
+.checker-meta span { color: var(--gold-dim); }
+
+@media (max-width: 560px) {
+  .checker-hero { padding-top: 110px; }
+}
