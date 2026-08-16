@@ -1014,18 +1014,19 @@ label {
   .nav-toggle { display: inline-flex; }
 
   .primary-nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: rgba(7,6,5,0.98);
-    border-bottom: 1px solid var(--line);
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    padding: 8px 20px 18px;
-    display: none;
-  }
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #070605;
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 24px 40px rgba(0,0,0,0.65);
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  padding: 8px 20px 28px;
+  display: none;
+}
   .primary-nav.open { display: flex; }
   .primary-nav a {
     padding: 14px 4px;
